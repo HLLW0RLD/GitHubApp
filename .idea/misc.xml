@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android projects/GitHubApp/app/src/main/res/drawable/round_corner_btn.xml" value="0.158" />
+        <entry key="..\:/Android projects/GitHubApp/app/src/main/res/drawable/round_image.xml" value="0.159" />
+        <entry key="..\:/Android projects/GitHubApp/app/src/main/res/layout/activity_main.xml" value="0.21979166666666666" />
+        <entry key="..\:/Android projects/GitHubApp/app/src/main/res/layout/fragment_auth.xml" value="0.494769245287653" />
+        <entry key="..\:/Android projects/GitHubApp/app/src/main/res/layout/fragment_details_repo.xml" value="0.21875" />
+        <entry key="..\:/Android projects/GitHubApp/app/src/main/res/layout/fragment_list_repo.xml" value="0.21875" />
+        <entry key="..\:/Android projects/GitHubApp/app/src/main/res/layout/item_repo.xml" value="0.21979166666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
