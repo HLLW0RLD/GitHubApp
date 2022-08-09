@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.githubapp.R
 import com.githubapp.databinding.FragmentListRepoBinding
 import com.githubapp.model.data.AccessToken
 import com.githubapp.utils.AppState
@@ -28,7 +29,6 @@ class ListRepoFragment : Fragment(), KoinComponent{
         get() = _binding!!
     private val adapter = ReposAdapter()
     private val viewModel: ReposViewModel by viewModel<ReposViewModel>()
-    private val tokenViewModel: AuthViewModel by viewModel<AuthViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,6 +43,16 @@ class ListRepoFragment : Fragment(), KoinComponent{
         super.onViewCreated(view, savedInstanceState)
 
         binding.listOfRepos.adapter = adapter
+        adapter.setOnItemViewClickListener { repo ->
+            activity?.supportFragmentManager?.apply {
+                beginTransaction()
+                    .add(R.id.container, RepoDetailsFragment.newInstance(Bundle().apply {
+                        putParcelable(RepoDetailsFragment.BUNDLE_EXTRA, repo)
+                    }))
+                    .addToBackStack("")
+                    .commitAllowingStateLoss()
+            }
+        }
         viewModel.reposLiveData.observe(viewLifecycleOwner) { renderData(it) }
         viewModel.getUser().let {
             viewModel.getRepos(it.toString()) }

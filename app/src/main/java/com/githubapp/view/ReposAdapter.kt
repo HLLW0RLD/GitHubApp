@@ -44,7 +44,7 @@ class ReposAdapter : RecyclerView.Adapter<ReposAdapter.MainViewHolder>() {
                 description.text = repo.description
                 Glide
                     .with(binding.root)
-                    .load(repo.avatar_url)
+                    .load(repo.image.avatar_url)
                     .into(authorImage)
 
                 root.setOnClickListener {

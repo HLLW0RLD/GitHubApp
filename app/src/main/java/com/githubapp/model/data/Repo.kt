@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class Repo(
     val name: String,
     val owner: User,
-    val avatar_url: String,
+    val image: User,
     val description: String,
     val forks_count: Int,
     val watchers_count: Int,
